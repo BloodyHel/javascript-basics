@@ -59,46 +59,118 @@ export const truthiness = (a) => {
 };
 
 export const isEqual = (a, b) => {
+    if (a == b) {
+        return true;
+        } else{
+        return false;
+        }
     // returns whether the two values are even
     // expect(isEqual(true, false)).toBe(false)
 };
 
 export const isGreaterThan = (a, b) => {
+    if (a > b) {
+        return true;
+        } else{
+        return false;
+        }
     // returns true if the first number is strictly greater than the second
     // expect(isGreaterThan(1, 2)).toBe(false)
 };
 
 export const isLessThanOrEqualTo = (a, b) => {
+    if (a <= b) {
+        return true;
+        } else{
+        return false;
+        }
     // returns true if the first number is less than or equal to the second
     // expect(isLessThanOrEqualTo(1, 2)).toBe(true)
 };
 
 export const isOdd = (a) => {
+    
+    if (a % 2 == 0) {
+    return false;
+    } else{
+        return true;
+    }
     // returns whether the number is odd
     // expect(isOdd(5)).toBe(true)
 };
 
+//function isOdd(num) { return num % 2;}
+
 export const isEven = (a) => {
+    if (a % 2 == 0) {
+        return true;
+        } else{
+            return false;
+        }
     // returns whether the number is even
     // expect(isEven(5)).toBe(false)
 };
 
 export const isSquare = (a) => {
+
+        for (var i = 0; i < a / 2 + 2; i++)
+        {
+            if (i * i == a)
+            {
+                return true;
+            }
+        }
+
+        return false;
+
+
+
     // returns true if the number is a square
     // expect(isSquare(9)).toEqual(true)
 };
 
 export const startsWith = (char, string) => {
+if (string.startsWith(char))
+{
+return true;
+
+} else {
+    return false;
+}
     // returns whether the given string starts with the given character
     // expect(startsWith('a', 'aardvark')).toBe(true)
 };
 
 export const containsVowels = (string) => {
+//    for (var i = 0; i < string.length; i++) {
+  //      if (i == "a" || i == "e" || i == "i" || i == "o" || i == "u")
+    //    {
+      //      return true;
+        //}
+
+    //}
+//return false;
+
+if(string.search(/[aeiou]/i) != -1){
+    return true;
+}else{
+    return false;
+}
+
     // returns whether the given string contains vowels
     // expect(containsVowels('cat')).toBe(true)
 };
 
 export const isLowerCase = (string) => {
+
+if(string.search(/[A-Z]/) != -1)
+{
+    return false;
+}else{
+    return true;
+}
     // it returns true if the given string is lowercase
     // expect(isLowerCase('abc')).toBe(true)
 };
+
+
