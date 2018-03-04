@@ -1,45 +1,58 @@
 export const getNthElement = (index, array) => {
-  // your code here
+  
+return array[index, 1];
+
 };
 
 export const arrayToCSVString = (array) => {
-  // your code here
+
+
+  return array.toString();
+
 };
 
 export const csvStringToArray = (string) => {
-  // your code here
+
+  return string.split(',');
+
 };
 
 export const addToArray = (array, element) => {
-  // your code here
+  array.push(element);
+
 };
 
 export const addToArray2 = (array, element) => {
-  // your code here
+  return array.concat(element);
+  
+
 };
 
-export const removeNthElement = (index, array) => {
-  // your code here
+export const removeNthElement = (array, index) => {
+ 
+array.splice(index, 1);
 };
 
 export const numbersToStrings = (numbers) => {
-  // your code here
+return numbers.map(function(number){return number.toString();})
 };
 
 export const uppercaseWordsInArray = (strings) => {
-  // your code here
+return strings.map(function(string){return string.toUpperCase();})
 };
 
 export const reverseWordsInArray = (strings) => {
-  // your code here
+  return strings.map(function(string){return string.split("").reverse().join("");})
 };
 
 export const onlyEven = (numbers) => {
-  // your code here
+  return numbers.filter(function(number){return number % 2 === 0;})
 };
 
 export const removeNthElement2 = (index, array) => {
-  // your code here
+	return array.filter(function(item, location) {
+        if (location !== index) return item;
+    });
 };
 
 export const elementsStartingWithAVowel = (strings) => {
