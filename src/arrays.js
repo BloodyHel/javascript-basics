@@ -1,6 +1,6 @@
 export const getNthElement = (index, array) => {
   
-return array[index, 1];
+return array[index % array.length];
 
 };
 
@@ -56,17 +56,23 @@ export const removeNthElement2 = (index, array) => {
 };
 
 export const elementsStartingWithAVowel = (strings) => {
-  // your code here
+return strings.filter((string) => {return /^[aeiou]/.test(string.toLowerCase());
+});
 };
 
 export const removeSpaces = (string) => {
-  // your code here
+return string.split('').filter((character) => {return character !== ' ';
+}).join('');
 };
 
 export const sumNumbers = (numbers) => {
-  // your code here
+  return numbers.reduce((acc, number) => {
+    return acc + number;
+  });
 };
 
 export const sortByLastLetter = (strings) => {
-  // your code here
+  return strings.sort((a, ) => {
+    return a.charAt(a.length - 1) > b.charAt(b.length - 1) ? 1 : -1
+  });
 };
